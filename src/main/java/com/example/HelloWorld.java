@@ -12,8 +12,8 @@ import io.micronaut.views.View;
 @Controller("/")
 public class HelloWorld {
   @Get(value = "/soy", produces = MediaType.TEXT_HTML)
-  @View("home")
-  public HttpResponse soyDemo() {
+  @View("sample.home")
+  public HttpResponse<?> soyDemo() {
     // return template context
     return HttpResponse.ok(ImmutableMap.of("username", "jdoe", "loggedIn", true));
   }
